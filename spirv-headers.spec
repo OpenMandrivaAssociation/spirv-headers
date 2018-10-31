@@ -1,7 +1,7 @@
 %define debug_package %{nil}
 Name:		spirv-headers
 Version:	2018.02.01
-Release:	1
+Release:	2
 Group:		Development/Tools
 Summary:	Headers for working with SPIR-V, a language for running on GPUs
 Source0:	https://github.com/KhronosGroup/SPIRV-Headers/archive/master.tar.gz
