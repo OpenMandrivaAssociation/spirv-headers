@@ -1,10 +1,9 @@
-%define debug_package %{nil}
 Name:		spirv-headers
-Version:	2018.02.01
-Release:	2
+Version:	1.3.7
+Release:	1
 Group:		Development/Tools
 Summary:	Headers for working with SPIR-V, a language for running on GPUs
-Source0:	https://github.com/KhronosGroup/SPIRV-Headers/archive/master.tar.gz
+Source0:	https://github.com/KhronosGroup/SPIRV-Headers/archive/%{version}.tar.gz
 License:	BSD-like
 BuildArch:	noarch
 BuildRequires:	cmake ninja
@@ -25,15 +24,14 @@ headers in the unified1 subdirectory. Older headers are provided
 according to their version.
 
 %prep
-%setup -qn SPIRV-Headers-master
-%cmake	-DCMAKE_INSTALL_PREFIX="%{buildroot}%{_prefix}" \
-	-G Ninja
+%autosetup -p1 -n SPIRV-Headers-%{version}
+%cmake -G Ninja
 
 %build
 %ninja_build -C build
 
 %install
-ninja install-headers -C build
+%ninja_install -C build
 
 %files
 %{_includedir}/spirv
