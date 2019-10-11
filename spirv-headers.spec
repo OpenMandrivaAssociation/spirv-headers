@@ -1,12 +1,13 @@
 Name:		spirv-headers
-Version:	1.4.1
+Version:	1.5.1
 Release:	1
 Group:		Development/Tools
 Summary:	Headers for working with SPIR-V, a language for running on GPUs
 Source0:	https://github.com/KhronosGroup/SPIRV-Headers/archive/%{version}.tar.gz
 License:	BSD-like
 BuildArch:	noarch
-BuildRequires:	cmake ninja
+BuildRequires:	cmake
+BuildRequires:	ninja
 
 %description
 This repository contains machine-readable files for the SPIR-V Registry.
