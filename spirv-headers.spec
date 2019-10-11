@@ -36,3 +36,5 @@ according to their version.
 
 %files
 %{_includedir}/spirv
+%dir %{_libdir}/cmake/SPIRV-Headers
+%{_libdir}/cmake/SPIRV-Headers/*.cmake
