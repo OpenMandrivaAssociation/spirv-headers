@@ -1,5 +1,5 @@
 Name:		spirv-headers
-Version:	1.5.3
+Version:	1.5.4
 Release:	1
 Group:		Development/Tools
 Summary:	Headers for working with SPIR-V, a language for running on GPUs
