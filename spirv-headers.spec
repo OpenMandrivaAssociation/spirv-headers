@@ -1,9 +1,9 @@
 Name:		spirv-headers
-Version:	1.5.4.raytracing.fixed
+Version:	1.5.4.z.20210429
 Release:	1
 Group:		Development/Tools
 Summary:	Headers for working with SPIR-V, a language for running on GPUs
-Source0:	https://github.com/KhronosGroup/SPIRV-Headers/archive/%{version}.tar.gz
+Source0:	https://github.com/KhronosGroup/SPIRV-Headers/archive/master.tar.gz
 License:	BSD-like
 BuildArch:	noarch
 BuildRequires:	cmake
@@ -25,7 +25,7 @@ headers in the unified1 subdirectory. Older headers are provided
 according to their version.
 
 %prep
-%autosetup -p1 -n SPIRV-Headers-%{version}
+%autosetup -p1 -n SPIRV-Headers-master
 %cmake -G Ninja
 
 %build
@@ -36,5 +36,5 @@ according to their version.
 
 %files
 %{_includedir}/spirv
-%dir %{_libdir}/cmake/SPIRV-Headers
-%{_libdir}/cmake/SPIRV-Headers/*.cmake
+%dir %{_datadir}/cmake/SPIRV-Headers
+%{_datadir}/cmake/SPIRV-Headers/*.cmake
